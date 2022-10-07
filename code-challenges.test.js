@@ -1,5 +1,7 @@
 // ASSESSMENT 5: JavaScript Coding Practical Questions with Jest
 
+const { exportAllDeclaration } = require("@babel/types");
+
 // Please read all questions thoroughly
 // Pseudo coding is REQUIRED
 // If you get stuck, please leave comments to help us understand your thought process
@@ -14,24 +16,36 @@
 
 // a) Create a test with expect statements using the variables provided.
 
-const secretCodeWord1 = "Lackadaisical"
-// Expected output: "L4ck4d41s1c4l"
-const secretCodeWord2 = "Gobbledygook"
-// Expected output: "G0bbl3dyg00k"
-const secretCodeWord3 = "Eccentric"
-// Expected output: "3cc3ntr1c"
+describe("enigma", () => {
+  it("takes in a string and returns a coded message.", () => {
+    const secretCodeWord1 = "Lackadaisical";
+    // Expected output: "L4ck4d41s1c4l"
+    expect(enigma(secretCodeWord1)).toEqual("L4ck4d41s1c4l");
+    const secretCodeWord2 = "Gobbledygook";
+    // Expected output: "G0bbl3dyg00k"
+    expect(enigma(secretCodeWord2)).toEqual("G0bbl3dyg00k");
+    const secretCodeWord3 = "Eccentric";
+    // Expected output: "3cc3ntr1c"
+    expect(enigma(secretCodeWord3)).toEqual("3cc3ntr1c");
+  });
+});
+// ReferenceError: enigma is not defined
+// Test Suites: 1 failed, 1 total
+// Tests:       1 failed, 1 total
+// expected test failure due to enigma not being defined.
 
 // b) Create the function that makes the test pass.
 
+;
 // --------------------2) Create a function that takes in an array of words and a single letter and returns an array of all the words containing that particular letter.
 
 // a) Create a test with expects statement using the variable provided.
 
-const fruitArray = ["Mango", "Cherry", "Apricot", "Blueberry", "Peach", "Kiwi"]
+// const fruitArray = ["Mango", "Cherry", "Apricot", "Blueberry", "Peach", "Kiwi"]
 
-const letterA = "a"
-// Expected output: ["Mango", "Apricot", "Peach"]
-const letterE = "e"
+// const letterA = "a"
+// // Expected output: ["Mango", "Apricot", "Peach"]
+// const letterE = "e"
 // Expected output: ["Cherry", "Blueberry", "Peach"]
 
 // b) Create the function that makes the test pass.
@@ -40,13 +54,13 @@ const letterE = "e"
 
 // a) Create a test with expect statements using the variable provided.
 
-const hand1 = [5, 5, 5, 3, 3]
-// Expected output: true
-const hand2 = [5, 5, 3, 3, 4]
-// Expected output: false
-const hand3 = [5, 5, 5, 5, 4]
-// Expected output: false
-const hand4 = [7, 2, 7, 2, 7]
+// const hand1 = [5, 5, 5, 3, 3]
+// // Expected output: true
+// const hand2 = [5, 5, 3, 3, 4]
+// // Expected output: false
+// const hand3 = [5, 5, 5, 5, 4]
+// // Expected output: false
+// const hand4 = [7, 2, 7, 2, 7]
 // Expected output: true
 
 // b) Create the function that makes the test pass.
