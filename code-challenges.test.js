@@ -36,17 +36,39 @@ describe("enigma", () => {
 
 // b) Create the function that makes the test pass.
 
-;
+// Alright so initially I looked at this and thought, "this doesn't seem too bad...". I was wrong. I slept on this and I still have no clue where to start so I'm gonna try to split the string to an array, and then use .map to iterate and then use a conditional to check each value.
+
+const enigma = (string.split("")).map((value) => {
+  if (value === "A" || "a") {
+  return "4"
+  } else if (value === "E" || "e") {
+  return "3"
+  } else if (value === "I" || "i") {
+    return "1"
+  } else if (value === "O" || "o") {
+    return "0"
+  } else {
+    return value
+  }
+})
+// I'm getting an error and I'm not sure why. I know it's syntaxical, but for some reason the else if statements past line 45 aren't being accessed.
+
 // --------------------2) Create a function that takes in an array of words and a single letter and returns an array of all the words containing that particular letter.
 
 // a) Create a test with expects statement using the variable provided.
+// describe("letterFinder", () => {
+//   it("takes in an array of words and a single letter and returns an array of all the words containing that particular letter.", () => {
+//     const fruitArray = ["Mango", "Cherry", "Apricot", "Blueberry", "Peach", "Kiwi"]
 
-// const fruitArray = ["Mango", "Cherry", "Apricot", "Blueberry", "Peach", "Kiwi"]
+//     const letterA = "a"
+//     // Expected output: ["Mango", "Apricot", "Peach"]
+//     expect(letterFinder(fruitArray, letterA)).toEqual(["Mango", "Apricot", "Peach"]);
 
-// const letterA = "a"
-// // Expected output: ["Mango", "Apricot", "Peach"]
-// const letterE = "e"
-// Expected output: ["Cherry", "Blueberry", "Peach"]
+//     const letterE = "e"
+//     // Expected output: ["Cherry", "Blueberry", "Peach"]
+//     expect(letterFinder(fruitArray, letterE)).toEqual(["Cherry", "Blueberry", "Peach"]);
+//   });
+// });
 
 // b) Create the function that makes the test pass.
 
