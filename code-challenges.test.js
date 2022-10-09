@@ -38,19 +38,23 @@ describe("enigma", () => {
 
 // Alright so initially I looked at this and thought, "this doesn't seem too bad...". I was wrong. I slept on this and I still have no clue where to start so I'm gonna try to split the string to an array, and then use .map to iterate and then use a conditional to check each value.
 
-const enigma = (string.split("")).map((value) => {
-  if (value === "A" || "a") {
-  return "4"
-  } else if (value === "E" || "e") {
-  return "3"
-  } else if (value === "I" || "i") {
-    return "1"
-  } else if (value === "O" || "o") {
-    return "0"
-  } else {
-    return value
-  }
-})
+const enigma = (string) => {
+  let enigmaArr = string.split("");
+  enigmaArr.map((value) => {
+    if (value === "A" || value === "a") {
+      return "4";
+    } else if (value === "E" || value === "e") {
+      return "3";
+    } else if (value === "I" || value === "i") {
+      return "1";
+    } else if (value === "O" || value === "o") {
+      return "0";
+    } else {
+      return value;
+    }
+  });
+  return enigmaArr.join("");
+};
 // I'm getting an error and I'm not sure why. I know it's syntaxical, but for some reason the else if statements past line 45 aren't being accessed.
 
 // --------------------2) Create a function that takes in an array of words and a single letter and returns an array of all the words containing that particular letter.
