@@ -20,7 +20,7 @@ Researched answer:
 
 3. What is Ruby on Rails?
 
-Your answer:
+Your answer: Ruby on Rails is a full-stack program that allows for app development utilizing Ruby and Rails as a coding platform, rather than JavaScript with React.
 
 Researched answer:
 
