@@ -38,9 +38,13 @@ describe("enigma", () => {
 
 // Alright so initially I looked at this and thought, "this doesn't seem too bad...". I was wrong. I slept on this and I still have no clue where to start so I'm gonna try to split the string to an array, and then use .map to iterate and then use a conditional to check each value.
 
+// enigma function takes in a string and then returns a coded word
 const enigma = (string) => {
+  // Declare new variable enigmaArr to store the split string
   let enigmaArr = string.split("");
-  enigmaArr.map((value) => {
+  // Use .map to iterate over the array and assign the result to variable codeWord
+  let codeWord = enigmaArr.map((value) => {
+    // Conditional statements to check values against the coded letters and change the value to a corresponding number
     if (value === "A" || value === "a") {
       return "4";
     } else if (value === "E" || value === "e") {
@@ -53,26 +57,29 @@ const enigma = (string) => {
       return value;
     }
   });
-  return enigmaArr.join("");
+  // Returns codeWord as a string with new code words
+  return codeWord.join("")
 };
-// I'm getting an error and I'm not sure why. I know it's syntaxical, but for some reason the else if statements past line 45 aren't being accessed.
+
+// Test Suites: 1 passed, 1 total
+// Tests:       1 passed, 1 total
 
 // --------------------2) Create a function that takes in an array of words and a single letter and returns an array of all the words containing that particular letter.
 
 // a) Create a test with expects statement using the variable provided.
-// describe("letterFinder", () => {
-//   it("takes in an array of words and a single letter and returns an array of all the words containing that particular letter.", () => {
-//     const fruitArray = ["Mango", "Cherry", "Apricot", "Blueberry", "Peach", "Kiwi"]
+describe("letterFinder", () => {
+  it("takes in an array of words and a single letter and returns an array of all the words containing that particular letter.", () => {
+    const fruitArray = ["Mango", "Cherry", "Apricot", "Blueberry", "Peach", "Kiwi"]
 
-//     const letterA = "a"
-//     // Expected output: ["Mango", "Apricot", "Peach"]
-//     expect(letterFinder(fruitArray, letterA)).toEqual(["Mango", "Apricot", "Peach"]);
+    const letterA = "a"
+    // Expected output: ["Mango", "Apricot", "Peach"]
+    expect(letterFinder(fruitArray, letterA)).toEqual(["Mango", "Apricot", "Peach"]);
 
-//     const letterE = "e"
-//     // Expected output: ["Cherry", "Blueberry", "Peach"]
-//     expect(letterFinder(fruitArray, letterE)).toEqual(["Cherry", "Blueberry", "Peach"]);
-//   });
-// });
+    const letterE = "e"
+    // Expected output: ["Cherry", "Blueberry", "Peach"]
+    expect(letterFinder(fruitArray, letterE)).toEqual(["Cherry", "Blueberry", "Peach"]);
+  });
+});
 
 // b) Create the function that makes the test pass.
 
