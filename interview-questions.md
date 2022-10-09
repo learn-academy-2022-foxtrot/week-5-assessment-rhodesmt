@@ -22,19 +22,19 @@ Researched answer: CRUD is a handy way to remember the four general actions that
 
 Your answer: Ruby on Rails is a full-stack program that allows for app development utilizing Ruby and Rails as a coding platform, rather than JavaScript with React.
 
-Researched answer:
+Researched answer: Ruby on Rails is a framework for writing full-stack applications using the Ruby programming language. JavaScript requires React for the same function, however some find it easier with Ruby since it utilizes an OOP functionality.
 
 4. What is a relational database? Are there other kinds of databases?
 
-Your answer:
+Your answer: A relational database is the format used within PostgreSQL. Similar to structures that most are familiar with, RD utilize a table format made of rows and columns with the data arrainged and displayed within. 
 
-Researched answer:
+Researched answer: A database can be made up of not just one table, but many tables that each have their own independent relationships between themselves. The layout and structure and a database is contained in a schema file. This is always a good place to check whenever a migration has been initiated to verify that a change has been made.
 
 5. What are primary keys? Why are they important?
 
-Your answer:
+Your answer: A primary key is kind of like an array index in JavaScript [0, 1, 2...] except in Rails, it is used to identify specific key:value pairs within an active record.
 
-Researched answer:
+Researched answer: The primary key will show up as "id: x" with x being a placeholding integer within the active record. Through this, we are able to utilize active record commands to specifically identify and manipulate single or multiple key:value pairs within the database table(s).
 
 ## Looking Ahead: Terms for Next Week
 
