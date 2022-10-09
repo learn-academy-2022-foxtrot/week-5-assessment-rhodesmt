@@ -8,15 +8,15 @@ Then, research the question to expand on your answer. Even if you feel you have 
 
 1. What is a gem?
 
-Your answer:
+Your answer: a Ruby gem is a package manager that is utilized in conjuction with Rails to allow for multiple individual files can be collected and displayed as one cohesive program.
 
-Researched answer:
+Researched answer: I was half correct(?), a gem is a library or snippet of code. Gems are then managed by a package manager called RubyGems that allow for quick and easy implimentation of common functionality to an app. It is similar to the way yarn interacts with JS files to allow for utilization within React.
 
 2. What does the acronym CRUD stand for?
 
-Your answer:
+Your answer: CRUD stands for Create, Read, Update, and Delete. It's purpose is almost like a guide for any developer work process. It is methodical and helps correct for fewer bugs and errors down the line.
 
-Researched answer:
+Researched answer: CRUD is a handy way to remember the four general actions that developers perform on data: creating new data, being able to read any existing data, updating existing data, and deleting data.
 
 3. What is Ruby on Rails?
 
