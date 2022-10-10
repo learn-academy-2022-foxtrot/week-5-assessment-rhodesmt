@@ -108,27 +108,45 @@ describe("letterFinder", () => {
 const letterFinder = (array, string) => {
   // Declare new variable letterArr to store the filtered array.
   let letterArr = array.filter((value) => {
-    // Checks given array against any words that include the string character given. 
+    // Checks given array against any words that include the string character given.
     return value.toLowerCase().includes(string.toLowerCase());
   });
   // Returns filtered array
-  return letterArr
+  return letterArr;
 };
+
 // Test Suites: 1 passed, 1 total
 // Tests:       2 passed, 2 total
 
-// Test passed! 
+// Test passed! I was having an issue where the return was an empty array. It was similar to the issue I was having with the first question, I wasn't telling the function to return the filtered result.
+
 // --------------------3) Create a function that takes in an array of 5 numbers and determines whether or not the array is a "full house". A full house is exactly one pair and one three of a kind.
 
 // a) Create a test with expect statements using the variable provided.
+describe("fullHouse", () => {
+  it("takes in an array of 5 numbers and determines whether or not the array is a 'full house'.", () => {
+    const hand1 = [5, 5, 5, 3, 3];
+    // // Expected output: true
+    expect(fullHouse(hand1)).toEqual(true);
 
-// const hand1 = [5, 5, 5, 3, 3]
-// // Expected output: true
-// const hand2 = [5, 5, 3, 3, 4]
-// // Expected output: false
-// const hand3 = [5, 5, 5, 5, 4]
-// // Expected output: false
-// const hand4 = [7, 2, 7, 2, 7]
-// Expected output: true
+    const hand2 = [5, 5, 3, 3, 4];
+    // // Expected output: false
+    expect(fullHouse(hand2)).toEqual(false);
+
+    const hand3 = [5, 5, 5, 5, 4];
+    // // Expected output: false
+    expect(fullHouse(hand3)).toEqual(false);
+
+    const hand4 = [7, 2, 7, 2, 7];
+    // Expected output: true
+    expect(fullHouse(hand4)).toEqual(true);
+  });
+});
+
+// ReferenceError: fullHouse is not defined
+// Test Suites: 1 failed, 1 total
+// Tests:       1 failed, 2 passed, 3 total
 
 // b) Create the function that makes the test pass.
+
+
