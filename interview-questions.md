@@ -40,12 +40,12 @@ Researched answer: The primary key will show up as "id: x" with x being a placeh
 
 Research and define the following terms to the best of your ability.
 
-1. RESTful routes:
+1. RESTful routes: REST stands for Representational State Transfer and is a recommended pattern to follow when structuring routes between the server and the client. RESTful routes are an attempt to bring the operations that can be applied to an object into HTTP requests.
 
-2. JSON:
+2. JSON: JSON stands for JavaScript Object Notation and is a text based representation of JavaScript objects. It is the standard format for communication between web application and host/client servers
 
-3. ERB:
+3. ERB: Stands for embedded Ruby. Embedded Ruby is a filestructure allowing us to code in HTML and then drop in Ruby code into the file view.
 
-4. Params:
+4. Params: is a method that will return ActiveController::Parameters, a hash of the parameters requested upon submission. 
 
-5. API:
+5. API: Stands for Application Programming Interface and is an communicates using JSON. An API in conjuction with the model and controller from the MVC model, work in sync to form the backend behind an application. 
