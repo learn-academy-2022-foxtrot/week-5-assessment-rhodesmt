@@ -64,6 +64,10 @@ const enigma = (string) => {
 // Test Suites: 1 passed, 1 total
 // Tests:       1 passed, 1 total
 
+// I won't say what I really said when I saw this pass, but I'm sure you could imagine. 
+
+// The problem was that I was calling the .map correctly, but that wasn't being stored or returned anywhere, so the initial string was being passed through and returned like it was told. Now with codeWord declared, I was able to store the mapped result and return the coded word as a string. What. A. Ride.
+
 // --------------------2) Create a function that takes in an array of words and a single letter and returns an array of all the words containing that particular letter.
 
 // a) Create a test with expects statement using the variable provided.
@@ -83,6 +87,13 @@ describe("letterFinder", () => {
 
 // b) Create the function that makes the test pass.
 
+// Ok so I need to declare a function that will accept two parameters: array and string. Array for the fruitArray and string for the letterA and letterE given inputs. I know I'm going to need to iterate over the array, but I know that I can't use map since my expected output is a shorter array. I might use .filter? and then use that to check the array values to see if they contain the letters and then push that as the return. 
+
+const letterFinder = (array, string) => {
+  array.filter((value, index) => {
+    
+  }) 
+}
 // --------------------3) Create a function that takes in an array of 5 numbers and determines whether or not the array is a "full house". A full house is exactly one pair and one three of a kind.
 
 // a) Create a test with expect statements using the variable provided.
