@@ -154,18 +154,37 @@ describe("fullHouse", () => {
 // function fullHouse takes in an array and iterates over the array
 
 // I found this method online and wanted to give it a try but it doesn't really make sense to me honestly. I understand I need to iterate, but the logic of checking the values against each other without hardcoding the numbers is the hardest part for me right now.
+// const fullHouse = (array) => {
+//   const handCheck = array.slice();
+//   for (let i = 0; i < array.length; ) {
+//     const el = handCheck.slice(i, 1)[0];
+//     if (handCheck.includes(el)) {
+//       handCheck.splice(handCheck.indexof(el), 1);
+//       if (handCheck.includes(el)) {
+//         return true;
+//       }
+//     } else {
+//       i++;
+//     }
+//   }
+//   return false;
+// };
+
 const fullHouse = (array) => {
-  const handCheck = array.slice();
-  for (let i = 0; i < array.length; ) {
-    const el = handCheck.slice(i, 1)[0];
-    if (handCheck.includes(el)) {
-      handCheck.splice(handCheck.indexof(el), 1);
-      if (handCheck.includes(el)) {
-        return true;
-      }
-    } else {
-      i++;
-    }
+  // .sort orders the array to make the conditional check easier. 
+  array.sort((a, b) => a - b)
+  // fullHouse hand conditional check, where the first three indexes match and the last two indexes match
+  if ((array[0] === array[1] && array[0] === array[2]) && (array[3] === array[4])){
+    return true
+    // fullHouse hand conditional check, where the last three indexes match and the first two indexes match
+  }else if ((array[0] === array[1]) && (array[2] === array[3] && array[2] === array[4])) {
+    return true
+  } else {
+    return false
   }
-  return false;
-};
+}
+
+// Test Suites: 1 passed, 1 total
+// Tests:       3 passed, 3 total
+
+// I would like to take all of the credit for this, but I would not have been able to do it without Tricia's help!! THANK YOU SO MUCH 
