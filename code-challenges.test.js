@@ -149,4 +149,23 @@ describe("fullHouse", () => {
 
 // b) Create the function that makes the test pass.
 
+// I'm going to need to iterate over the array and run a conditional statement to check the values within the array. I'm not sure about the conditional logic though...
 
+// function fullHouse takes in an array and iterates over the array
+
+// I found this method online and wanted to give it a try but it doesn't really make sense to me honestly. I understand I need to iterate, but the logic of checking the values against each other without hardcoding the numbers is the hardest part for me right now.
+const fullHouse = (array) => {
+  const handCheck = array.slice();
+  for (let i = 0; i < array.length; ) {
+    const el = handCheck.slice(i, 1)[0];
+    if (handCheck.includes(el)) {
+      handCheck.splice(handCheck.indexof(el), 1);
+      if (handCheck.includes(el)) {
+        return true;
+      }
+    } else {
+      i++;
+    }
+  }
+  return false;
+};
