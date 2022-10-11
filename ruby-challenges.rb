@@ -51,17 +51,35 @@ class Bike
         "The #{model} bike has #{wheels} wheels and is going #{current_speed} mph."
     end
 
+    def pedal_faster(number)
+        @current_speed += number
+    end
+
+    def brake(number)
+        [@current_speed -= number, 0].max
+    end
+
 
 end
 
-huffy = Bike.new('Huffy')
-p huffy.get_info
+my_bike = Bike.new('Huffy')
+p my_bike.get_info
 # Output: "The Huffy bike has 2 wheels and is going 0 mph."
-
 
 # -------------------3b) Add the ability to pedal faster and brake. The pedal_faster method should increase the speed by a given amount. The brake method should decrease the speed by a given amount. The bike cannot go negative speeds.
 
-# Expected output example: my_bike.pedal_faster(10) => 10
-# Expected output example: my_bike.pedal_faster(18) => 28
-# Expected output example: my_bike.brake(5) => 23
-# Expected output example: my_bike.brake(25) => 0
+p my_bike.pedal_faster(10)
+# Expected: 10
+# Output: 10
+
+p my_bike.pedal_faster(18)
+# Expected: 28
+# Output: 28
+
+p my_bike.brake(5)
+# Expected: 23
+# Output: 23
+
+p my_bike.brake(25)
+# Expected: 0
+# Output: 0
