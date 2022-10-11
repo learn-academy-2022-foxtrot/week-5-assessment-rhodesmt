@@ -15,9 +15,9 @@ def letter_finder (array, string)
     p new_arr
 end
 
-letter_finder(beverages_array, letter_o)
+# letter_finder(beverages_array, letter_o)
 # Expected output: ['coffee', 'soda water']
-letter_finder(beverages_array, letter_t)
+# letter_finder(beverages_array, letter_t)
 # Expected output: ['tea', 'water', 'soda water']
 
 # -------------------2) Create a method that takes in a hash and returns one array with all the hash values at their own index and in alphabetical order. No nested arrays. Use the test variable provided.
@@ -30,7 +30,7 @@ us_states = { northwest: ['Washington', 'Oregon', 'Idaho'], southwest: ['Califor
 def states_list (hash)
     hash.values.flatten.sort
 end
-  p states_list(us_states)
+#   p states_list(us_states)
 # Output: ["Arizona", "California", "Idaho", "Maine", "Nevada", "New Hampshire", "Oregon", "Vermont", "Washington"]
 
 # state_list(us_states)
@@ -38,6 +38,25 @@ end
 
 # Expected output example: 'The Trek bike has 2 wheels and is going 0 mph.'
 
+class Bike
+    attr_accessor :model, :wheels, :current_speed
+
+    def initialize(model)
+        @model = model
+        @wheels = 2
+        @current_speed = 0
+    end
+
+    def get_info
+        "The #{model} bike has #{wheels} wheels and is going #{current_speed} mph."
+    end
+
+
+end
+
+huffy = Bike.new('Huffy')
+p huffy.get_info
+# Output: "The Huffy bike has 2 wheels and is going 0 mph."
 
 
 # -------------------3b) Add the ability to pedal faster and brake. The pedal_faster method should increase the speed by a given amount. The brake method should decrease the speed by a given amount. The bike cannot go negative speeds.
